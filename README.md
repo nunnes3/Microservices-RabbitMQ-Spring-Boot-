@@ -37,14 +37,6 @@ Estrutura interna:
 * `models` → Entidades
 * `configs` → Configurações do RabbitMQ
 
-Exemplo de evento publicado:
-
-```
-user.created
-```
-
----
-
 ## 📧 Microsserviço: ms_email
 
 Responsabilidades:
@@ -60,12 +52,6 @@ Estrutura interna:
 * `models` → Entidades
 * `repositories` → Persistência do log de e-mail
 * `configs` → Configurações do RabbitMQ
-
-Este serviço fica "ouvindo" o evento:
-
-```
-user.created
-```
 
 Ao receber, ele dispara o envio do e-mail.
 
@@ -95,14 +81,6 @@ Para rodar o projeto corretamente, você precisa ter:
 * Java 17 ou superior
 * Maven
 
-Acesso padrão do RabbitMQ:
-
-```
-Host: localhost
-Porta: 5672
-Usuário: guest
-Senha: guest
-```
 
 Se você tiver o painel de administração habilitado:
 
@@ -146,13 +124,6 @@ Body (exemplo):
   "email": "joao@email.com"
 }
 ```
-
-Você deverá ver no console do **ms_email** algo como:
-
-```
-📧 Email enviado para joao@email.com
-```
-
 ---
 
 ## ✅ Tecnologias Utilizadas
@@ -172,7 +143,6 @@ Você deverá ver no console do **ms_email** algo como:
 * Adicionar Retry automático
 * Implementar Notification-Service
 * Adicionar Spring Cloud Config
-* Adicionar Zipkin / Sleuth para tracing
 * Criar um API Gateway
 
 ---
